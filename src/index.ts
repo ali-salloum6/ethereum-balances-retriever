@@ -56,7 +56,7 @@ app.get("/balances", async (req: Request, res: Response) => {
     let mergedData: MergedData = {};
 
     addressesArray.forEach((address, index) => {
-        mergedData[address] = balances[index] || "0";
+        mergedData[address] = formattedBalances[index] || "0";
     });
 
     // Send the formatted balances in the response
